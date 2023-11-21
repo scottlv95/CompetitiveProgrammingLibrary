@@ -7,6 +7,7 @@ typedef long long ll;                            // for extra flexibility
 typedef vector<ll> vll;
 typedef vector<int> vi;
 
+// 1 indexed
 class FenwickTree {                              // index 0 is not used
 private:
   vll ft;                                        // internal FT is an array

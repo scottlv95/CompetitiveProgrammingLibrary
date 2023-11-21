@@ -5,8 +5,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef vector<int> vi;
+typedef long long ll;
+typedef vector<ll> vi;
+typedef pair<ll, ll> ii;
+typedef vector<ii> vii;
+#define FASTIO                \
+    ios ::sync_with_stdio(0); \
+    cin.tie(0);               \
+    cout.tie(0);
+#define mp make_pair
+#define pb push_back
+#define eb emplace_back
+#define nl "\n"
+#define all(v) v.begin(),v.end()
+#define rep(i,a,b) for(int i=a; i<b; i++)
 
+// RIGHT inclusive
 class SegmentTree {                              // OOP style
 private:
   int n;                                         // n = (int)A.size()
