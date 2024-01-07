@@ -19,6 +19,7 @@ typedef vector<ii> vii;
 #define rep(i,a,b) for(int i=a; i<b; i++)
 #define sz(x) (int)x.size()
  
+// 0 indexed and right not inclusive 
 struct SegmentTree {
     int n;
     vector<vector<int>> tree;
@@ -41,6 +42,7 @@ struct SegmentTree {
         build(a, 0, 0, n);
     }
  
+    // between [mn mx)
     int count(int lq, int rq, int mn, int mx, int x, int l, int r) {
         if (rq <= l || r <= lq) return 0;
         if (lq <= l && r <= rq) return lower_bound(all(tree[x]), mx) - lower_bound(all(tree[x]), mn);
@@ -51,6 +53,7 @@ struct SegmentTree {
         return a + b;
     }
  
+    // between [mn mx)
     int count(int lq, int rq, int mn, int mx) {
         return count(lq, rq, mn, mx, 0, 0, n);
     }
